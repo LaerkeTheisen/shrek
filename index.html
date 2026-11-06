@@ -4,34 +4,106 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eventnavn</title>
+  <title>Shrek O' Ween</title>
   <link rel="stylesheet" href="./starter.css">
   <link rel="stylesheet" href="./style.css">
 </head>
 
-<body>
+<body class="forside"> <!-- RETTELSE HER -->
+
   <header class="site-header">
     <div class="header-content">
-      <a class="site-logo" href="./">Eventnavn</a>
+      <a class="site-logo" href="./">Logo</a> <!-- RETTELSE HER -->
+
       <nav class="site-nav">
-        <button>Menu</button>
+        <button popovertarget="menu">Menu</button> <!-- RETTELSE HER -->
+
         <ul class="menu" id="menu" popover>
           <li><a href="./" aria-current="page">Forside</a></li>
-          <li><a href="./svg.html">Interaktiv SVG</a></li>
-          <li><a href="./form.html">Formular</a></li>
+          <li><a href="./svg.html">Program</a></li>
+          <li><a href="./form.html">Find dit kostume</a></li>
         </ul>
       </nav>
+
+      <!-- RETTELSE HER -->
+      <a href="#billetter" class="button billet-knap">Køb Sumppas</a>
     </div>
   </header>
 
-  <main></main>
+  <main>
 
-  <footer class="site-footer">
+    <!-- RETTELSE HER: HERO SEKTION -->
+    <section class="hero">
+
+      <div class="hero-content">
+        <h1>Shrek O' Ween</h1>
+        <h2>Velkommen til halloweenfest i sumpen</h2>
+
+        <p>
+          Gør dig klar til årets vildeste sump-fest!
+          Besvar formularens spørgsmål for at opdage,
+          hvilken Shrek-karakter du er skæbnebestemt
+          til at klæde dig ud som. Vi ses i sumpen!
+        </p>
+
+        <div class="hero-knapper">
+          <a href="./form.html" class="button">Find dit kostume</a>
+          <a href="./svg.html" class="button button-creme">Program</a>
+        </div>
+      </div>
+
+      <img src="./imgs/shrekogaesel.png" alt="Shrek og Æsel" class="shrek-aesel">
+
+      <a href="#nedslag" class="scroll-ned">
+        Er vi der ikke snart? ↓
+      </a>
+
+    </section>
+
+    <!-- RETTELSE HER: NEDSLAG -->
+    <section class="nedslag" id="nedslag">
+
+      <h2>Nedslag fra sumpen</h2>
+      <p>Udforsk eventet - Der er flere lag</p>
+
+      <div class="kort-container">
+
+        <article class="kort">
+          <div class="kort-billede">Billede</div>
+          <div class="kort-tekst">
+            <h3>Bar og Cocktails</h3>
+            <a href="./svg.html" class="button">Læs mere</a>
+          </div>
+        </article>
+
+        <article class="kort">
+          <div class="kort-billede">Billede</div>
+          <div class="kort-tekst">
+            <h3>Kostume konkurrence</h3>
+            <a href="./form.html" class="button">Læs mere</a>
+          </div>
+        </article>
+
+        <article class="kort">
+          <div class="kort-billede">Billede</div>
+          <div class="kort-tekst">
+            <h3>All-Star Halloween-Rave</h3>
+            <a href="./svg.html" class="button">Læs mere</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="billetter">
     <div class="footer-content">
-      <p>Eventnavn</p>
+      <p>Shrek O' Ween</p>
       <p>Footer</p>
     </div>
   </footer>
+
   <script src="./script.js"></script>
 </body>
 

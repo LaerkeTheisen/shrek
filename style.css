@@ -1,10 +1,10 @@
 /* Variabler */
 html {
-  --color-page: #f7f7f7;
-  --color-surface: #fff;
-  --color-text: #222;
-  --color-muted: #666;
-  --color-border: #d8d8d8;
+  --color-page: #2d3a27; /* RETTELSE HER */
+  --color-surface: #8c9a3e; /* RETTELSE HER */
+  --color-text: #f2ebd9; /* RETTELSE HER */
+  --color-muted: #f2ebd9; /* RETTELSE HER */
+  --color-border: #8c9a3e; /* RETTELSE HER */
   --space-05: 0.5rem;
   --space-1: 1rem;
   --space-2: 2rem;
@@ -21,6 +21,12 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: minmax(1rlh, 1fr) minmax(0, 75rem) minmax(1rlh, 1fr);
+
+  /* RETTELSE HER - fælles sump-baggrund */
+  background-image: url("./imgs/shrekbaggrund.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 h1,
@@ -40,6 +46,11 @@ main {
 main > * {
   grid-column: 2;
   padding-block: var(--space-3);
+}
+
+/* RETTELSE HER - forsidens layout */
+.forside main {
+  display: block;
 }
 
 .svg-page {
@@ -125,6 +136,18 @@ main > * {
   background: var(--color-surface);
 }
 
+/* RETTELSE HER - fælles gennemsigtig header */
+.site-header {
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+}
+
 .header-content,
 .footer-content {
   grid-column: 2;
@@ -136,6 +159,12 @@ main > * {
   justify-content: space-between;
   align-items: center;
   gap: var(--space-1);
+
+  /* RETTELSE HER */
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 25px;
+  box-sizing: border-box;
 }
 
 .site-logo {
@@ -194,8 +223,16 @@ main > * {
   border-bottom: 2px solid #0000;
 }
 
+/* RETTELSE HER - aktiv side i orange */
 .menu a[aria-current="page"] {
-  border-bottom-color: var(--color-border);
+  /* border-bottom-color: var(--color-border); */
+  color: #d9531e;
+  border-bottom-color: transparent;
+}
+
+/* RETTELSE HER - hover */
+.menu a:hover {
+  color: #d9531e;
 }
 
 /* Flader */
@@ -241,7 +278,7 @@ main > * {
   color: var(--color-muted);
 }
 
-/* Knap/link */
+/* Knap/link 
 .button {
   justify-self: start;
   display: inline-block;
@@ -250,4 +287,149 @@ main > * {
   background: var(--color-surface);
   color: inherit;
   text-decoration: none;
+}
+*/
+
+/* Knap/link */
+.button {
+  display: inline-block;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px;
+  background: #d9531e;
+  color: #131313;
+  text-decoration: none;
+}
+
+/* RETTELSE HER - cremefarvet knap */
+.button-creme {
+  background: #f2ebd9;
+}
+
+/* Forside hero */
+.hero {
+  position: relative;
+  height: 720px;
+  padding: 0;
+  overflow: hidden;
+  /* grid-collum: 1 /-1; ved ikke om dette skal bruges, men det gør at baggrunden fylder så meget */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+  max-width: 1200px;
+  margin: auto;
+  padding: 150px 25px 0;
+}
+
+.hero h1 {
+  font-size: 65px;
+  color: #8c9a3e;
+}
+
+.hero h2 {
+  font-size: 24px;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  max-width: 370px;
+  margin-bottom: 15px;
+}
+
+.hero-knapper {
+  display: flex;
+  gap: 15px;
+}
+
+/* Shrek og Æsel */
+.shrek-aesel {
+  position: absolute;
+  width: 500px;
+  bottom: 0;
+  right: 10%;
+}
+
+/* Scroll tekst */
+.scroll-ned {
+  display: grid;
+  position: absolute;
+  bottom: 10px;
+  left: 50%; /* RETTELSE HER */
+  transform: translateX(-50%); /* RETTELSE HER */
+
+  color: #f2ebd9;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Nedslag fra sumpen */
+.nedslag {
+  background: #2d3a27;
+  padding: 30px 25px;
+}
+
+.nedslag h2 {
+  font-size: 25px;
+  font-weight: normal;
+}
+
+.nedslag p {
+  margin-bottom: 15px;
+}
+
+/* Tre kort */
+.kort-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.kort {
+  background: #8c9a3e;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.kort-billede {
+  height: 175px;
+  background: #d9d9d9;
+  color: #131313;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kort-tekst {
+  padding: 15px;
+}
+
+.kort-tekst h3 {
+  margin-bottom: 10px;
+}
+
+/* Mobil */
+@media (max-width: 600px) {
+  .hero {
+    height: 750px;
+  }
+
+  .hero-content {
+    padding: 120px 20px 0;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .shrek-aesel {
+    width: 300px;
+    right: 0;
+  }
+
+  .kort-container {
+    grid-template-columns: 1fr;
+  }
 }
