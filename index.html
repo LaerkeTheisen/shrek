@@ -4,7 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eventnavn</title>
+  <title>Shrek O Ween</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Creepster&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="./starter.css">
   <link rel="stylesheet" href="./style.css">
 </head>
@@ -12,19 +17,101 @@
 <body>
   <header class="site-header">
     <div class="header-content">
-      <a class="site-logo" href="./">Eventnavn</a>
+      <a class="site-logo" href="./">Shrek O Ween</a>
       <nav class="site-nav">
         <button>Menu</button>
         <ul class="menu" id="menu" popover>
           <li><a href="./" aria-current="page">Forside</a></li>
-          <li><a href="./svg.html">Interaktiv SVG</a></li>
-          <li><a href="./form.html">Formular</a></li>
+          <li><a href="./svg.html">Program</a></li>
+          <li><a href="./form.html">Find dit kostume</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main></main>
+  <main>
+    <section class="hero_section">
+      <div class="grid_forside">
+        <div class="indhold_forside">
+          <h1>Shrek O Ween</h1>
+          <h2 class="h2_lys">Velkommen til Halloweenfest i Sumpen!</h2>
+          <p class="p_lys">Gør dig klar til årets vildeste sump-fest! Besvar formularens spørgsmål for at opdage,
+            hvilken
+            Shrek-karakter
+            du er
+            skæbnebestemt til at klæde dig ud som. Vi ses i Sumpen!</p>
+          <div class="grid_1-1 forside_knapper">
+            <a class="knap_orange" href="./form.html">Find dit kostume</a>
+            <a class="knap_hvid" href="./svg.html">Program</a>
+          </div>
+        </div>
+        <img class="img_shrek" src="./imgs/shrek_forside.png" alt="græskar, shrek og æsel">
+        <div class="scrol_knap">
+          <a href="#indhold_bund">
+            Er vi der ikke snart?<br>↓
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="nedslag_section">
+      <h2 class="h2_lys h2_break">Nedslag fra Sumpen</h2>
+      <p class="p_lys">Udforsk eventet - der er flere lag!</p>
+      <div id="indhold_bund" class="card_container">
+        <div class="card">
+          <img src="./imgs/kostumer.png" alt="kostumer">
+          <div class="card_indhold">
+            <p>Bar og Cocktails</p>
+            <button class="knap_orange" popovertarget="popover_card1">Læs mere</button>
+          </div>
+        </div>
+        <div class="popover_card" id="popover_card1" popover>
+          <img src="./imgs/kostumer.png" alt="kostumer">
+          <div class="popover_indhold">
+            <p class="p_overskrift">Bar og Cocktails</p>
+            <p>Træd ind i den mørkeste krostue og sluk tørsten i grøn sump-bryg og spidse gift-shots. Bare rolig, Æsel
+              står klar i køkkenet og serverer friske midnats-vafler til at skylle det ned med!</p>
+            <button class="knap_orange" popovertarget="popover_card1">Læs mindre</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./imgs/kostumer.png" alt="kostumer">
+          <div class="card_indhold">
+            <p>Kostume konkurrence</p>
+            <button class="knap_orange" popovertarget="popover_card2">Læs mere</button>
+          </div>
+        </div>
+        <div class="popover_card" id="popover_card2" popover>
+          <img src="./imgs/kostumer.png" alt="kostumer">
+          <div class="popover_indhold">
+            <p class="p_overskrift">Kostume konkurrence</p>
+            <p>Hop i det kostume, som testen på forsiden har skæbnebestemt dig til! Uanset om du ankommer som Fiona, Den
+              Bestøvlede Kat eller en af De Tre Blinde Mus, kårer vi nattens vildeste sump-look.</p>
+            <button class="knap_orange" popovertarget="popover_card2">Læs mindre</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./imgs/kostumer.png" alt="kostumer">
+          <div class="card_indhold">
+            <p>All-Star Halloween-Rave</p>
+            <button class="knap_orange" popovertarget="popover_card3">Læs mere</button>
+          </div>
+        </div>
+        <div class="popover_card" id="popover_card3" popover>
+          <img src="./imgs/kostumer.png" alt="kostumer">
+          <div class="popover_indhold">
+            <p class="p_overskrift">All-Star Halloween-Rave</p>
+            <p>Når mørket falder over sumpen, skruer vi op for et brag af en fest. DJ'en pumper Smash Mouth,
+              00'er-bangers
+              og monster-hits ud i højttalerne – og Lord Farquaad har strengt forbud mod at skrue ned!</p>
+            <button class="knap_orange" popovertarget="popover_card3">Læs mindre</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer class="site-footer">
     <div class="footer-content">
