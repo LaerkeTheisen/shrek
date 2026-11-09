@@ -4,7 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interaktiv SVG | Eventnavn</title>
+  <title>Program | Shrek O Ween</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Creepster&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="./starter.css">
   <link rel="stylesheet" href="./style.css">
 </head>
@@ -14,33 +19,36 @@
     <div class="header-content">
       <a class="site-logo" href="./">Eventnavn</a>
       <nav class="site-nav">
-        <button>Menu</button>
+        <button popovertarget="menu">Menu</button>
         <ul class="menu" id="menu" popover>
           <li><a href="./">Forside</a></li>
-          <li><a href="./svg.html" aria-current="page">Interaktiv SVG</a></li>
-          <li><a href="./form.html">Formular</a></li>
+          <li><a href="./svg.html" aria-current="page">Program</a></li>
+          <li><a href="./form.html">Find dit kostume</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main class="bg_svg">
     <section class="svg-page">
       <header class="svg-intro">
-        <h1>Interaktiv SVG</h1>
-        <p>Indsæt din egen SVG og forbind den med punkterne nedenfor.</p>
+        <h1>Shrek O Ween</h1>
       </header>
 
       <section class="svg-layout">
-        <div class="svg-placeholder"></div>
+        <div class="svg-placeholder">
+          <svg class="svg_shrek" viewBox="0 0 1920 1080">
+            <use href="./imgs/shrek_vector.svg#bg"></use>
+            <use class="shrek" href="./imgs/shrek_vector.svg#shrek"></use>
+          </svg>
+        </div>
 
         <article class="panel">
           <h2>Udforsk eventet</h2>
           <p>Vælg et område på programmet og se Shrek bevæge sig hen til det næste stop. Hvert punkt viser en del af
             eventet</p>
           <div class="accordion">
-            <!-- TODO: Lav om til details/summary -->
-            <details class="accordion-item" name="accordion">
+            <details class="accordion-item" name="accordion" data-position="sump" id="details-sump">
               <summary>Sumpen</summary>
               <div class="content">
                 <p>Træd ind i Shreks sump, hvor magien begynder! Her finder du alt om, hvor og hvornår festen løber af
@@ -48,7 +56,7 @@
                   komme sikkert frem til sumpen.</p>
               </div>
             </details>
-            <details class="accordion-item" name="accordion">
+            <details class="accordion-item" name="accordion" data-position="bar" id="details-bar">
               <summary>Baren</summary>
               <div class="content">
                 <p>Fyld bægeret og stil den værste trolddomssult. Her kan du udforske udvalget af forfriskende
@@ -56,7 +64,7 @@
                   og lækre snacks!</p>
               </div>
             </details>
-            <details class="accordion-item" name="accordion">
+            <details class="accordion-item" name="accordion" data-position="doris" id="details-doris">
               <summary>Doris' garderobe</summary>
               <div class="content">
                 <p>Er du en Shrek, et æsel eller noget helt tredje? Tag vores hurtige test her på sitet og se, hvilket
