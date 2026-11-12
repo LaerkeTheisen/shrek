@@ -1,17 +1,22 @@
 // Interaktiv SVG-side
-const svgMap = document.querySelector(".svg-map");
+const svgShrek = document.querySelector(".svg_shrek");
 
-if (svgMap) {
-  const shrek = svgMap.querySelector("#shrek-mover");
+if (svgShrek) {
   const status = document.querySelector("#shrek-status");
-
-  document.querySelectorAll(".svg-location").forEach((location) => {
-    location.querySelector("summary").addEventListener("click", () => {
-      if (!shrek || !status) return;
-
-      const { x, y } = location.dataset;
-      shrek.style.transform = `translate(${x}px, ${y}px)`;
-      status.textContent = `Shrek er på vej til ${location.querySelector("summary").textContent}.`;
+  document.querySelectorAll(".accordion-item[data-position]").forEach((location) => {
+    location.addEventListener("toggle", () => {
+      const openLocation = document.querySelector(".accordion-item:open");
+      if (openLocation) {
+        svgShrek.dataset.position = openLocation.dataset.position;
+        if (status) {
+          status.textContent = `Shrek er på vej til ${openLocation.querySelector("summary").textContent}.`;
+        }
+      } else {
+        delete svgShrek.dataset.position;
+        if (status) {
+          status.textContent = "Shrek står på stien. Vælg et sted, han skal besøge.";
+        }
+      }
     });
   });
 }
