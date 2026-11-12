@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Udforsk sumpen | Shrek O Ween</title>
+  <title>Interaktiv SVG | Eventnavn</title>
   <link rel="stylesheet" href="./starter.css">
   <link rel="stylesheet" href="./style.css">
 </head>
@@ -12,13 +12,13 @@
 <body>
   <header class="site-header">
     <div class="header-content">
-      <a class="site-logo" href="./">Shrek O Ween</a>
+      <a class="site-logo" href="./">Eventnavn</a>
       <nav class="site-nav">
-        <button popovertarget="menu">Menu</button>
+        <button>Menu</button>
         <ul class="menu" id="menu" popover>
           <li><a href="./">Forside</a></li>
-          <li><a href="./svg.html" aria-current="page">Udforsk sumpen</a></li>
-          <li><a href="./form.html">Find dit kostume</a></li>
+          <li><a href="./svg.html" aria-current="page">Interaktiv SVG</a></li>
+          <li><a href="./form.html">Formular</a></li>
         </ul>
       </nav>
     </div>
@@ -27,41 +27,36 @@
   <main>
     <section class="svg-page">
       <header class="svg-intro">
-        <h1>Udforsk sumpen</h1>
-        <p>Vælg et sted på kortet, og se Shrek gå på opdagelse til sumpen, baren eller Doris' garderobe.</p>
+        <h1>Interaktiv SVG</h1>
+        <p>Indsæt din egen SVG og forbind den med punkterne nedenfor.</p>
       </header>
 
       <section class="svg-layout">
-        <div class="svg-map-frame">
-          <svg class="svg-map" viewBox="0 0 1920 1080" role="img" aria-labelledby="map-title map-description">
-            <title id="map-title">Kort over sumpen</title>
-            <desc id="map-description">Et kort med Shreks sump, en bar og Doris' garderobe.</desc>
-            <use href="./imgs/shrek_vector%20(2).svg#bg"></use>
-            <g id="shrek-mover" class="svg-map-shrek">
-              <use href="./imgs/shrek_vector%20(2).svg#shrek"></use>
-            </g>
-          </svg>
-        </div>
+        <div class="svg-placeholder"></div>
 
         <article class="panel">
-          <h2>Vælg et sted</h2>
-          <p id="shrek-status" aria-live="polite">Shrek står på stien. Vælg et sted, han skal besøge.</p>
+          <h2>Udforsk eventet</h2>
+          <p>Vælg et område på programmet og se Shrek bevæge sig hen til det næste stop. Hvert punkt viser en del af
+            eventet</p>
           <div class="accordion">
-            <details class="accordion-item svg-location" data-x="-320" data-y="-290">
+            <!-- TODO: Lav om til details/summary -->
+            <details class="accordion-item" name="accordion">
               <summary>Sumpen</summary>
               <div class="content">
                 <p>Træd ind i Shreks sump, hvor magien begynder! Her finder du alt om, hvor og hvornår festen løber af
-                  stablen, så du kan komme sikkert frem til sumpen.</p>
+                  stablen, så du kan
+                  komme sikkert frem til sumpen.</p>
               </div>
             </details>
-            <details class="accordion-item svg-location" data-x="790" data-y="-300">
+            <details class="accordion-item" name="accordion">
               <summary>Baren</summary>
               <div class="content">
                 <p>Fyld bægeret og stil den værste trolddomssult. Her kan du udforske udvalget af forfriskende
-                  sumpdrikke og lækre snacks!</p>
+                  sumpdrikke
+                  og lækre snacks!</p>
               </div>
             </details>
-            <details class="accordion-item svg-location" data-x="790" data-y="160">
+            <details class="accordion-item" name="accordion">
               <summary>Doris' garderobe</summary>
               <div class="content">
                 <p>Er du en Shrek, et æsel eller noget helt tredje? Tag vores hurtige test her på sitet og se, hvilket
@@ -77,8 +72,8 @@
 
   <footer class="site-footer">
     <div class="footer-content">
-      <p>Shrek O Ween</p>
-      <p>Velkommen til sumpen!</p>
+      <p>Eventnavn</p>
+      <p>Footer</p>
     </div>
   </footer>
   <script src="./script.js"></script>
