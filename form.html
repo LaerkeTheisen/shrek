@@ -12,12 +12,12 @@
 <body>
   <header class="site-header">
     <div class="header-content">
-      <a class="site-logo" href="./">Eventnavn</a>
+      <a class="site-logo" href="./">Shrek o Ween</a>
       <nav class="site-nav">
-        <button>Menu</button>
+        <button popovertarget="menu">Menu</button>
         <ul class="menu" id="menu" popover>
           <li><a href="./">Forside</a></li>
-          <li><a href="./svg.html">Interaktiv SVG</a></li>
+          <li><a href="./svg.html">Udforsk sumpen</a></li>
           <li><a href="./form.html" aria-current="page">Formular</a></li>
         </ul>
       </nav>
@@ -27,8 +27,37 @@
   <main>
     <section class="form-page">
       <header class="form-intro">
-        <h1>Formular</h1>
-        <p>Lav en formular, der sender brugeren videre til opsamlingssiden.</p>
+        <h1>Program</h1>
+        <div class="program">
+          <article class="program-item">
+            <time class="program-time" datetime="20:00">20.00</time>
+            <div class="program-details">
+              <h2 class="program-title">Halloween Games</h2>
+              <p>Skøre konkurrencer, udfordringer og masser af sump-kaos.</p>
+            </div>
+          </article>
+          <article class="program-item">
+            <time class="program-time" datetime="20:30">20.30</time>
+            <div class="program-details">
+              <h2 class="program-title">Best Costume Contest</h2>
+              <p>Hvem har aftenens bedste kostume? Shrek, Fiona, Æslet eller måske en mystisk eventyrfigur?</p>
+            </div>
+          </article>
+          <article class="program-item">
+            <time class="program-time" datetime="21:00">21.00</time>
+            <div class="program-details">
+              <h2 class="program-title">Swamp Party Begins!</h2>
+              <p>Musikken skrues op, drinksene flyder, og dansegulvet bliver overtaget af sumpens skabninger.</p>
+            </div>
+          </article>
+          <article class="program-item">
+            <time class="program-time" datetime="00:00">00.00</time>
+            <div class="program-details">
+              <h2 class="program-title">Midnight in the Swamp</h2>
+              <p>Når klokken slår midnat, er der kun én regel: Keep partying!</p>
+            </div>
+          </article>
+        </div>
       </header>
 
       <form class="form-placeholder" action="./opsamling.html"></form>
