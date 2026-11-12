@@ -1,4 +1,11 @@
 /* Variabler */
+@font-face {
+  font-family: "Shrek";
+  src: url("./SHREK___.TTF") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
 html {
   --color-page: #2d3a27;
   --color-surface: #8c9a3e;
@@ -18,7 +25,7 @@ html {
 /* Generelt */
 h1 {
   color: var(--h1-color);
-  font-family: "Creepster", system-ui;
+  font-family: "Shrek", system-ui;
   font-weight: 400;
   font-style: normal;
   font-size: 5.5rem;
@@ -26,7 +33,7 @@ h1 {
 }
 
 h2 {
-  font-family: "Almendra", serif;
+  font-family: "Almena", serif;
   font-weight: 400;
   font-style: normal;
   font-size: 3rem;
@@ -42,9 +49,13 @@ summary {
   font-size: 1.25rem;
 }
 
-.h2_lys,
+.h2_lys {
+  color: #d8d8d8;
+  font-family: "Times New Roman", Times, serif;
+}
 .p_lys {
   color: var(--light-color);
+  font-family: fantasy;
 }
 
 .h2_mørk,
@@ -482,6 +493,7 @@ html {
 
 .site-logo {
   color: inherit;
+  font-family: "Shrek", system-ui;
   font-weight: 700;
   text-decoration: none;
 }
@@ -591,4 +603,14 @@ html {
   background: var(--color-surface);
   color: inherit;
   text-decoration: none;
+}
+
+html,
+a,
+button,
+.knap_orange,
+.knap_hvid {
+  cursor:
+    url("./imgs/cursor-shrek.png") 6 6,
+    auto;
 }
