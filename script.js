@@ -29,3 +29,14 @@ if (opsamlingPlaceholder) {
   const params = new URLSearchParams(window.location.search);
   // Eksempel: params.get("navn") henter værdien fra et formularfelt med name="navn".
 }
+
+// fjern fejlbesked
+const form = document.querySelector("form");
+
+function cancelPopup(event) {
+  // Forhindr browserens valideringsboble
+  event.preventDefault();
+  form.querySelector(":invalid").focus();
+}
+
+form.addEventListener("invalid", cancelPopup, true);
