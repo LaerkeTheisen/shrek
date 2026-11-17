@@ -32,7 +32,8 @@ h2 {
   font-size: 3rem;
 }
 
-h3 {
+h3,
+legend {
   font-family: "Nunito", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
@@ -43,7 +44,9 @@ h3 {
 p,
 a,
 summary,
-ul {
+ul,
+label,
+button {
   color: var(--light-color);
   font-family: "Nunito", sans-serif;
   font-optical-sizing: auto;
@@ -59,7 +62,8 @@ ul {
 }
 
 .h2_mørk,
-.p_mørk {
+.p_mørk,
+label {
   color: var(--dark-color);
 }
 
@@ -260,7 +264,7 @@ main > * {
 }
 
 .card,
-.popover_card[popover] {
+.popover_card[popover]:popover-open {
   display: grid;
   grid-template-rows: 2fr 1fr;
   padding: 0;
@@ -492,10 +496,13 @@ html {
 /* Header og footer */
 .site-header {
   grid-column: 1 / -1;
-
+  position: sticky;
   display: grid;
   grid-template-columns: inherit;
   background: var(--color-page);
+  top: 0;
+  z-index: 100;
+  width: 100%;
 }
 
 .site-footer {
@@ -654,7 +661,7 @@ html {
   text-decoration: none;
 }
 
-/* NYE RETTELSER HER - FORMULAR */
+/* FORMULAR */
 
 /* Baggrund fra forsiden */
 body:has(.form-page) {
@@ -699,6 +706,7 @@ body:has(.form-page) {
 .form-placeholder {
   background-color: var(--color-page);
   padding: var(--space-2);
+  margin-bottom: var(--space-3);
   display: grid;
   gap: var(--space-1);
   align-content: start;
@@ -709,17 +717,18 @@ body:has(.form-page) {
   background-color: var(--color-surface);
   border: none;
   border-radius: 25px;
-  padding: 1.5rem;
+  padding: var(--space-1);
   min-width: 0;
 }
 
 /* Spørgsmålenes overskrifter */
 .form-placeholder legend {
   background-color: var(--color-surface);
-  border-radius: 10px;
-  padding: 0.4rem;
+  border-radius: 35px;
+  padding: var(--space-1) var(--space-1) 0 var(--space-1);
   font-family: "Nunito", sans-serif;
   font-weight: 700;
+  font-size: 17px;
 }
 
 /* Svarmuligheder */
@@ -734,7 +743,6 @@ body:has(.form-page) {
 
 /* Radio buttons */
 .form-placeholder input[type="radio"] {
-  accent-color: var(--accent-color);
   width: 1rem;
   height: 1rem;
   flex-shrink: 0;
@@ -744,6 +752,14 @@ body:has(.form-page) {
 .form-placeholder button {
   justify-self: center;
   margin-top: var(--space-1);
+}
+
+#hype {
+  width: 100%;
+}
+
+form {
+  accent-color: var(--accent-color);
 }
 
 /* Mobil */
@@ -766,4 +782,62 @@ body:has(.form-page) {
   border: 4px dotted var(--accent-color);
 }
 
-/* SLUT PÅ NYE RETTELSER */
+/* Farve-svar-muligheder */
+.color_input {
+  cursor: pointer;
+}
+
+label[data-color="green"] {
+  background-color: #2d3a27;
+}
+
+label[data-color="red"] {
+  background-color: #3b0c0c;
+}
+
+label[data-color="brown"] {
+  background-color: #7f2501;
+}
+
+label[data-color="purple"] {
+  background-color: #2d1535;
+}
+
+.form_color {
+  display: flex;
+  gap: var(--space-1);
+}
+
+label[data-color] {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+label[data-color]:has(input:checked) {
+  outline: 3px solid var(--accent-color);
+  border: 2px solid var(--accent-color);
+  outline-offset: 4px;
+}
+
+/* Animationer */
+@keyframes progress {
+  from {
+    scale: 0 1;
+  }
+}
+
+.site-header::after {
+  content: "";
+  height: 4px;
+  width: 100%;
+  background-color: #d9531e;
+  grid-column: 1 / -1;
+  z-index: 100;
+  transform-origin: left;
+  animation: progress linear;
+  animation-timeline: scroll(root);
+}

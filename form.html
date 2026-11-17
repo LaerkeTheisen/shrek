@@ -76,7 +76,9 @@
 
       <form class="form-placeholder" action="./opsamling.html">
         <fieldset>
-          <legend>Hvilken sætning beskriver bedst dig til en fest?</legend>
+          <legend>
+            <h3>Hvilken sætning beskriver bedst dig til en fest?</h3>
+          </legend>
 
           <label for="sassy">
             <input id="sassy" name="nickname" type="radio" value="sassy" required>
@@ -95,35 +97,43 @@
         </fieldset>
 
         <fieldset>
-          <legend>Hvilket udsagn passer bedst til din bestilling i baren?</legend>
+          <legend>
+            <h3>Hvilket udsagn passer bedst til din bestilling i baren?</h3>
+          </legend>
 
           <label for="espresso_martini">
-            <input id="espresso_martini" name="reason" type="radio" value="espresso_martini" required>
+            <input id="espresso_martini" name="reason" type="radio" value="Espresso Martini" required>
             Jeg skal have noget classy i hånden, så alle kan se, hvor dyr en smag jeg har. At jeg har 42 kr. på kontoen,
             er irrelevant.
           </label>
 
           <label for="vodka_redbull">
-            <input id="vodka_redbull" name="reason" type="radio" value="vodka_redbull">
+            <input id="vodka_redbull" name="reason" type="radio" value="Vodka Redbull">
             Jeg skal være fuld og vågen på samme tid. Jeg er udødelig, selvom min puls er på 180.
           </label>
 
           <label for="tequila">
-            <input id="tequila" name="reason" type="radio" value="tequila">
+            <input id="tequila" name="reason" type="radio" value="Tequila">
             Jeg drikker ikke for smagens skyld. Jeg drikker for at blive et problem for alle omkring mig.
           </label>
         </fieldset>
 
-        <div class="form_group">
-          <label for="hype">Hvad er dit hype-niveau til fest?</label>
-          <input id="hype" name="hype" type="range" min="0" max="100" value="60">
-        </div>
+        <fieldset>
+          <div class="form_group">
+            <legend for="hype">
+              <h3>Hvad er dit hype-niveau til fest?</h3>
+            </legend>
+            <input id="hype" name="hype" type="range" min="0" max="100" value="60">
+          </div>
+        </fieldset>
 
-        <fieldset class="form_group" data-layout="inline">
-          <legend>Vælg din accentfarve</legend>
+        <fieldset class="form_color">
+          <legend>
+            <h3>Vælg din opkast-farve efter fest i Sumpen</h3>
+          </legend>
 
           <label for="color_green" data-color="green">
-            <input class="color_input" id="color_green" type="radio" name="color" value="green">
+            <input class="color_input" id="color_green" type="radio" name="color" value="green" required>
           </label>
 
           <label for="color_red" data-color="red">
