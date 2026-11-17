@@ -26,16 +26,24 @@ h1 {
 }
 
 h2 {
-  color: var(--light-color);
   font-family: "Almendra", serif;
   font-weight: 400;
   font-style: normal;
   font-size: 3rem;
 }
 
+h3 {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.25rem;
+}
+
 p,
 a,
-summary {
+summary,
+ul {
   color: var(--light-color);
   font-family: "Nunito", sans-serif;
   font-optical-sizing: auto;
@@ -81,6 +89,13 @@ summary {
   cursor: pointer;
 }
 
+.bg_svg,
+.bg_opsamling {
+  background-image: url(./imgs/baggrundsbillede.png);
+  background-size: cover;
+  background-position: center;
+}
+
 /* Globalt layout */
 body {
   margin: 0;
@@ -89,9 +104,7 @@ body {
   grid-template-rows: auto 1fr auto;
   grid-template-columns: minmax(1rlh, 1fr) minmax(0, 75rem) minmax(1rlh, 1fr);
 
-  cursor:
-    url("./imgs/cursor-shrek.png") 8 8,
-    auto;
+  cursor: url("./imgs/cursor-shrek.png"), auto;
 }
 
 h1,
@@ -148,7 +161,7 @@ main > * {
   max-width: 60ch;
 }
 
-.opsamling-page {
+/* .opsamling-page {
   display: grid;
   gap: var(--space-2);
   align-items: start;
@@ -156,13 +169,7 @@ main > * {
   @media (width > 800px) {
     grid-template-columns: minmax(0, 44ch) minmax(20rem, 1fr);
   }
-}
-
-.opsamling-intro {
-  display: grid;
-  gap: var(--space-1);
-  max-width: 60ch;
-}
+} */
 
 .error-page {
   display: grid;
@@ -413,12 +420,6 @@ html {
 }
 
 /* SVG */
-.bg_svg {
-  background-image: url(./imgs/baggrundsbillede.png);
-  background-size: cover;
-  background-position: center;
-}
-
 .shrek {
   transition: 0.5s;
   translate: var(--x) var(--y);
@@ -453,6 +454,41 @@ html {
   padding: var(--space-1) var(--space-2);
 }
 
+/* Opsamling */
+.h1_opsamling {
+  padding: 0;
+}
+
+.opsamling_container {
+  background: var(--color-page);
+  border-radius: 35px;
+  margin: var(--space-3);
+  padding: var(--space-3) var(--space-3) 0 var(--space-3);
+}
+
+.opsamling {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+}
+
+.opsamling_tekst {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-block: var(--space-2);
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: var(--space-1);
+  justify-content: start;
+  padding-bottom: var(--space-3);
+}
+
+.sassyshrek_img {
+  align-self: end;
+}
+
 /* Header og footer */
 .site-header {
   grid-column: 1 / -1;
@@ -461,6 +497,7 @@ html {
   grid-template-columns: inherit;
   background: var(--color-page);
 }
+
 .site-footer {
   grid-column: 1 / -1;
 
@@ -550,6 +587,7 @@ html {
     border: none;
     background: none;
     position: static;
+    justify-content: center;
   }
 }
 
@@ -562,14 +600,13 @@ html {
 }
 
 .menu a[aria-current="page"] {
-  border-bottom-color: var(--color-border);
+  border-bottom-color: var(--accent-color);
 }
 
 /* Flader */
 .panel,
 .svg-placeholder,
-.form-placeholder,
-.opsamling-placeholder {
+.form-placeholder {
   background: var(--color-surface);
   border-radius: 35px;
 }

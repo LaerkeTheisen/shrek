@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Opsamling | Eventnavn</title>
+  <title>Dit kostume | Shrek O Ween</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -17,29 +17,49 @@
 <body>
   <header class="site-header">
     <div class="header-content">
-      <a class="site-logo" href="./">Eventnavn</a>
+      <a class="site-logo" href="./">Shrek O Ween</a>
       <nav class="site-nav">
         <button popovertarget="menu">Menu</button>
         <ul class="menu" id="menu" popover>
           <li><a href="./">Forside</a></li>
-          <li><a href="./svg.html">Udforsk sumpen</a></li>
-          <li><a href="./form.html" aria-current="page">Formular</a></li>
+          <li><a href="./svg.html">Udforsk Sumpen</a></li>
+          <li><a href="./form.html" aria-current="page">Find dit kostume</a></li>
         </ul>
       </nav>
+      <a class="knap_orange header-knap" href="index.html">
+        Køb billet
+      </a>
     </div>
   </header>
 
-  <main>
+  <main class="bg_opsamling">
     <section class="opsamling-page">
-      <div class="opsamling-intro">
-        <h1>Opsamling</h1>
-        <p>Vis brugerens valg som et pass, en invitation eller noget andet, der passer til dit event.</p>
-        <div class="actions">
-          <a class="button" href="./form.html">Tilbage til formular</a>
+      <div class="opsamling_container">
+        <h2 class="h2_lys">Doris har talt! Du skal være:</h2>
+        <div class="opsamling">
+          <div>
+            <div class="opsamling_overskrift">
+              <h1 class="h1_opsamling nickname-output"></h1>
+            </div>
+            <div class="opsamling_tekst">
+              <div class="drink">
+                <h3 class="h3_lys">Go-To Drink:</h3>
+                <p class="reason-output"></p>
+              </div>
+              <div class="hype_niveau">
+                <h3 class="h3_lys">Hype-niveau:</h3>
+                <p class="hype-level"></p>
+              </div>
+            </div>
+            <div class="actions">
+              <a class="knap_orange" href="">Kopier link til dit resultat</a>
+              <a class="knap_hvid" href="./form.html">Prøv igen!</a>
+            </div>
+          </div>
+          <img class="shrek_karakter" src="" alt="Shrek karakter">
         </div>
-      </div>
 
-      <article class="opsamling-placeholder"></article>
+      </div>
     </section>
   </main>
 

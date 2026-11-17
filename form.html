@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formular | Eventnavn</title>
+  <title>Find dit kostume | Shrek O Ween</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -17,20 +17,16 @@
 <body>
   <header class="site-header">
     <div class="header-content">
-
-      <a class="site-logo" href="./">Shrek o Ween</a>
-
+      <a class="site-logo" href="./">Shrek O Ween</a>
       <nav class="site-nav">
         <button popovertarget="menu">Menu</button>
 
         <ul class="menu" id="menu" popover>
           <li><a href="./">Forside</a></li>
-          <li><a href="./svg.html">Udforsk sumpen</a></li>
-          <li><a href="./form.html" aria-current="page">Kostume generator</a></li>
+          <li><a href="./svg.html">Udforsk Sumpen</a></li>
+          <li><a href="./form.html" aria-current="page">Find dit kostume</a></li>
         </ul>
       </nav>
-
-      <!-- NY RETTELSE HER - ORANGE KNAP -->
       <a href="index.html" class="knap_orange header-knap">
         Køb billet
       </a>
@@ -38,7 +34,6 @@
   </header>
 
   <main>
-    <!-- NYE RETTELSER HER - FORMULAR -->
     <h1>Hvem er du i sumpen?</h1>
     <section class="form-page">
       <header class="form-intro">
@@ -79,75 +74,76 @@
         </section>
       </header>
 
-      <form class="form-placeholder" onsubmit="return false;">
-
+      <form class="form-placeholder" action="./opsamling.html">
         <fieldset>
-          <legend>Hvad er din rolle til en fest? *</legend>
+          <legend>Hvilken sætning beskriver bedst dig til en fest?</legend>
 
-          <label>
-            <input type="radio" name="rolle" value="midtpunkt" required>
-
-            Jeg er festens midtpunkt
+          <label for="sassy">
+            <input id="sassy" name="nickname" type="radio" value="sassy" required>
+            Jeg er ikke dramatisk, jeg er bare hovedpersonen. Neglene er skarpe, men attituden er værre.
           </label>
 
-          <label>
-            <input type="radio" name="rolle" value="venner">
-            Jeg passer på mine venner
+          <label for="rizzler">
+            <input id="rizzler" name="nickname" type="radio" value="rizzler">
+            Jeg er Guds gave til kvindekønnet, og jeg ved det godt selv. Sixpacken er fremme og selvtilliden er i top.
           </label>
 
-          <label>
-            <input type="radio" name="rolle" value="kaos">
-            Jeg skaber kaos og god stemning
+          <label for="danse">
+            <input id="danse" name="nickname" type="radio" value="danse">
+            DJ’en spiller for mig, og resten af jer er bare baggrundsdansere.
           </label>
         </fieldset>
 
         <fieldset>
-          <legend>Hvad gør du, når du kommer til festen? *</legend>
+          <legend>Hvilket udsagn passer bedst til din bestilling i baren?</legend>
 
-          <label>
-            <input type="radio" name="ankomst" value="bar" required>
-            Går direkte mod baren
+          <label for="espresso_martini">
+            <input id="espresso_martini" name="reason" type="radio" value="espresso_martini" required>
+            Jeg skal have noget classy i hånden, så alle kan se, hvor dyr en smag jeg har. At jeg har 42 kr. på kontoen,
+            er irrelevant.
           </label>
 
-          <label>
-            <input type="radio" name="ankomst" value="dans">
-            Finder mine venner og danser
+          <label for="vodka_redbull">
+            <input id="vodka_redbull" name="reason" type="radio" value="vodka_redbull">
+            Jeg skal være fuld og vågen på samme tid. Jeg er udødelig, selvom min puls er på 180.
           </label>
 
-          <label>
-            <input type="radio" name="ankomst" value="kontrol">
-            Holder øje med, at alt går efter planen
-          </label>
-        </fieldset>
-
-        <fieldset>
-          <legend>Hvad er din største svaghed? *</legend>
-
-          <label>
-            <input type="radio" name="svaghed" value="snakker" required>
-            Jeg snakker alt for meget
-          </label>
-
-          <label>
-            <input type="radio" name="svaghed" value="staedig">
-            Jeg er ekstremt stædig
-          </label>
-
-          <label>
-            <input type="radio" name="svaghed" value="opmaerksomhed">
-            Jeg elsker opmærksomhed
+          <label for="tequila">
+            <input id="tequila" name="reason" type="radio" value="tequila">
+            Jeg drikker ikke for smagens skyld. Jeg drikker for at blive et problem for alle omkring mig.
           </label>
         </fieldset>
 
-        <button class="knap_orange" type="submit">
+        <div class="form_group">
+          <label for="hype">Hvad er dit hype-niveau til fest?</label>
+          <input id="hype" name="hype" type="range" min="0" max="100" value="60">
+        </div>
+
+        <fieldset class="form_group" data-layout="inline">
+          <legend>Vælg din accentfarve</legend>
+
+          <label for="color_green" data-color="green">
+            <input class="color_input" id="color_green" type="radio" name="color" value="green">
+          </label>
+
+          <label for="color_red" data-color="red">
+            <input class="color_input" id="color_red" type="radio" name="color" value="red">
+          </label>
+
+          <label for="color_brown" data-color="brown">
+            <input class="color_input" id="color_brown" type="radio" name="color" value="brown">
+          </label>
+
+          <label for="color_purple" data-color="purple">
+            <input class="color_input" id="color_purple" type="radio" name="color" value="purple">
+          </label>
+        </fieldset>
+
+        <button class="knap_orange">
           Find dit kostume
         </button>
-
       </form>
     </section>
-
-    <!-- SLUT PÅ NYE RETTELSER -->
-
   </main>
 
   <footer class="site-footer">
